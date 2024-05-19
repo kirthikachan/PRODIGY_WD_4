@@ -1,0 +1,658 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    width: fit-content;
+}
+
+:root {
+    --background-color: #080808;
+    --second-bg-color: #222222;
+    --text-color: white;
+}
+
+html {
+    font-size: 80%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/*-----navbar and header------*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 12% 4rem;
+    background: rbga(0, 0, 0);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.logo span {
+    color: rgb(221, 21, 154);
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: rgb(221, 21, 154)e;
+    border-bottom: 3px solid rgb(221, 21, 154);
+}
+
+#menu-icon {
+    font-size: 4rem;
+    color: rgb(221, 21, 154);
+    display: none;
+}
+
+/*----------for home section------*/
+section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+span {
+    color: rgb(221, 21, 154);
+}
+
+.home-content h3 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.home-content h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+
+.home-img {
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-img img {
+    position: relative;
+    top: 3rem;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgb(221, 21, 154);
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    max-width: 1000px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: 2px solid rgb(221, 21, 154);
+    font-size: 2rem;
+    border-radius: 50%;
+    color: rgb(221, 21, 154);
+    margin: 1rem 0.2rem;
+    transition: 0.2s ease-in-out;
+    margin-right: 15px;
+}
+
+.social-icons a:hover {
+    color: var(--text-color);
+    background-color: rgb(221, 21, 154);
+    transform: scale(1.3);
+    box-shadow: 0 0 22px rgb(221, 21, 154);
+}
+
+.btn {
+    padding: 15px 15px;
+    border: 1px solid rgb(221, 21, 154);
+    border-radius: 1.5rem;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: rgb(221, 21, 154);
+}
+
+.btn-group {
+    margin-top: 10px;
+}
+
+/*----------about section-------------*/
+
+.about {
+    background-color: var(--second-bg-color);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-2 {
+    padding-left: 2rem;
+}
+
+.col-2 .heading {
+    color: rgb(221, 21, 154);
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+.col-2 p {
+    font-size: 1.5rem;
+    font-weight: 20px;
+    letter-spacing: 1px;
+}
+
+.btn-about {
+    margin-top: 20px;
+    padding-top: 15px;
+}
+
+/*-----education section--------*/
+.education {
+    background-color: var(--second-bg-color);
+}
+
+.education h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 5rem;
+    color: rgb(221, 21, 154);
+}
+
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.education-box {
+    color: black;
+    height: 350px;
+    border: 1px solid white;
+    border-radius: 2rem;
+    background: rgb(221, 21, 154);
+    transition: 0.3s ease-in-out;
+}
+
+.education-box:hover {
+    background: black;
+    color: azure;
+}
+
+.education-box .education-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+    max-height: 300px;
+    padding: 3rem 3rem;
+    align-items: baseline;
+}
+
+.education-icon {
+    font-size: 3rem;
+}
+
+.education-info h4 {
+    font-size: 2rem;
+    font-weight: 350px;
+    line-height: 1;
+}
+
+.education-info p {
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    line-height: 1.4;
+    margin: auto;
+}
+
+/*------project section-------*/
+
+.projects {
+    background-color: var(--second-bg-color);
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 5rem;
+    color: rgb(221, 21, 154);
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 10rem;
+}
+
+.project-box {
+    height: auto;
+    margin-bottom: 3rem;
+}
+
+.project-box img {
+    height: 300px;
+    width: 300px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.project-description {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.project-description p {
+    margin: 0;
+    color: rgb(221, 21, 154);
+    font-size: 30px;
+}
+
+/*---------contact section----------*/
+
+.contact {
+    background-color: #0e0d0d;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: rgb(221, 21, 154);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+    margin: 5rem auto;
+}
+
+.contact form .input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-box input {
+    height: 35px;
+    padding: 20px 20px;
+    background-color: rgb(44, 43, 43);
+    border: 1px solid rgb(221, 21, 154);
+    border-radius: 10px;
+}
+
+.contact form .input-box input {
+    width: 500px;
+    padding: 2rem rem;
+    font-size: 1.5rem;
+}
+
+.contact form .input-box textarea {
+    width: 500px;
+    height: 250px;
+    font-size: 1.5rem;
+    background-color: rgb(44, 43, 43);
+    border: rgb(221, 21, 154);
+    border-radius: 10px;
+    padding-left: 20px;
+    color: black;
+}
+
+.input-box textarea:hover {
+    box-shadow: 0 0 25px rgb(221, 21, 154);
+}
+
+form .btn {
+    width: 300px;
+    background-color: rgb(44, 43, 43);
+}
+
+
+
+/*-----responsive------*/
+
+@media (max-width: 1245px) {
+    html {
+        font-size: 55%;
+    }
+
+    .service-container {
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 5rem;
+    }
+
+    .project-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 2rem;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 995px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .services {
+        padding-bottom: 7rem;
+    }
+
+    .service-container {
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 5rem;
+    }
+
+    .services-box {
+        color: black;
+        height: 200px;
+        border: 1px solid white;
+        border-radius: 2rem;
+        background: aquamarine;
+        transition: 0.3s ease-in-out;
+    }
+
+    .services h2 {
+        font-size: 5rem;
+    }
+
+    .service-info p {
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        line-height: 1.5;
+        margin: auto;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .project-box {
+        height: 300px;
+        margin-left: 40px;
+    }
+
+    .project-box img {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 5rem 2% 1rem;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0);
+        backdrop-filter: blur(5px);
+        border-bottom-left-radius: 2rem;
+        display: none;
+    }
+
+    .navbar .active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 2.8rem;
+        margin-top: 3rem;
+    }
+
+    .home-content p {
+        font-size: 1.6rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .home-img img {
+        width: 45vw;
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .col-1 {
+        margin: 0 50px;
+    }
+
+    .col-2 {
+        padding-left: 2.5rem;
+    }
+
+    .col-2 .heading {
+        font-size: 3.2rem;
+        padding-top: 1rem;
+    }
+
+    .col-2 p {
+        font-size: 1.5rem;
+    }
+
+    .social-icons a {
+        margin-bottom: 1.5rem;
+    }
+
+    .services h2 {
+        font-size: 2.5rem;
+    }
+
+    .service-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-container {
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        gap: 2rem;
+        margin: 0 35px;
+    }
+
+    .contact form .input-box input {
+        margin: 0 50px;
+        width: 350px;
+    }
+
+    .contact form .input-box textarea {
+        width: 350px;
+        height: 200px;
+        margin: 0 48px;
+    }
+
+    form .btn {
+        width: 230px;
+    }
+
+    .footer-container {
+        padding: 40px 25px 15px;
+    }
+}
+
+/* Add a container class for 2xl width */
+.container {
+    width: 90%;
+    max-width: 1440px; /* Adjust max-width for 2xl screens if needed */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Adjust header and footer styling */
+.header,
+footer {
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+/* Adjust responsiveness for smaller screens */
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding: 0 15px; /* Add padding for smaller screens */
+    }
+}
+
+/* Adjust responsiveness for medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        width: 90%;
+        padding: 0 15px; /* Add padding for smaller screens */
+    }
+}
+
+/* Adjust responsiveness for large screens */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .container {
+        width: 90%;
+        padding: 0 30px; /* Add padding for larger screens */
+    }
+}
+
+/* Adjust responsiveness for extra-large screens */
+@media (min-width: 1280px) and (max-width: 1535px) {
+    .container {
+        width: 90%;
+        padding: 0 30px; /* Add padding for larger screens */
+    }
+}
+
+/* Adjust responsiveness for 2xl screens */
+@media (min-width: 1536px) {
+    .container {
+        width: 90%;
+        padding: 0 50px; /* Add padding for larger screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .education-container {
+        grid-template-columns: 1fr; /* Set to a single column for smaller screens */
+    }
+}
+
+/* Media query for screens smaller than 768px (phones) */
+@media (max-width: 767px) {
+    .project-box {
+        height: auto; /* Remove fixed height */
+        margin-bottom: 3rem; /* Add some space between project boxes */
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center project card content */
+        text-align: center; /* Center project description text */
+    }
+
+    .project-description {
+        margin-top: 1rem; /* Add some space between image and description */
+    }
+}
